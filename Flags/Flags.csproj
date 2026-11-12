@@ -1,0 +1,1272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A5DE29F-7BC3-4261-8AE2-4B6F0BF4EE7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Flags</RootNamespace>
+    <AssemblyName>GorillaFlags</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AA.Mothership, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\AA.Mothership.dll</HintPath>
+    </Reference>
+    <Reference Include="ALINE, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\ALINE.dll</HintPath>
+    </Reference>
+    <Reference Include="andywiecko.BurstTriangulator">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\andywiecko.BurstTriangulator.dll</HintPath>
+    </Reference>
+    <Reference Include="arcade_success, Version=1.2.4.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\arcade_success.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="AssistantCoreSDKRuntime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\AssistantCoreSDKRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="AssistantVoiceCommandCommon">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\AssistantVoiceCommandCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="AstarPathfindingProject, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\AstarPathfindingProject.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Fbx">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Autodesk.Fbx.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Fbx.BuildTestAssets">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Autodesk.Fbx.BuildTestAssets.dll</HintPath>
+    </Reference>
+    <Reference Include="Backtrace.Unity, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Backtrace.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="BakeryAPV">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\BakeryAPV.dll</HintPath>
+    </Reference>
+    <Reference Include="BakeryECS">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\BakeryECS.dll</HintPath>
+    </Reference>
+    <Reference Include="BakeryRuntimeAssembly, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\BakeryRuntimeAssembly.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BoingKit, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\BoingKit.dll</HintPath>
+    </Reference>
+    <Reference Include="BoingKit.Examples">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\BoingKit.Examples.dll</HintPath>
+    </Reference>
+    <Reference Include="CjLib, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\CjLib.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="DebugDrawingExtension">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\DebugDrawingExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="Domain_Reload">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Domain_Reload.dll</HintPath>
+    </Reference>
+    <Reference Include="EmotitronCompression, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\EmotitronCompression.dll</HintPath>
+    </Reference>
+    <Reference Include="endel.nativewebsocket, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\endel.nativewebsocket.dll</HintPath>
+    </Reference>
+    <Reference Include="Fusion.Common, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Fusion.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Fusion.Log, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Fusion.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Fusion.Realtime, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Fusion.Realtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Fusion.Runtime, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Fusion.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Fusion.Sockets, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Fusion.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="Fusion.Unity, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Fusion.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="geometry3Sharp">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\geometry3Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="GT_CustomMapSupportRuntime, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\GT_CustomMapSupportRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="KID, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\KID.dll</HintPath>
+    </Reference>
+    <Reference Include="LIV.LCK, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\LIV.LCK.dll</HintPath>
+    </Reference>
+    <Reference Include="LIV.LCK.Streaming">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\LIV.LCK.Streaming.dll</HintPath>
+    </Reference>
+    <Reference Include="LIV.LCKCore, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\LIV.LCKCore.dll</HintPath>
+    </Reference>
+    <Reference Include="LIV.LCKCore.ThirdParty.MessagePack, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\LIV.LCKCore.ThirdParty.MessagePack.dll</HintPath>
+    </Reference>
+    <Reference Include="LIV.LCK_GorillaTag, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\LIV.LCK_GorillaTag.dll</HintPath>
+    </Reference>
+    <Reference Include="LIV.NativeAudioBridge, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\LIV.NativeAudioBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshBakerCore">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\MeshBakerCore.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshBakerExamples">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\MeshBakerExamples.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.Net.endel.nativewebsocket, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.Net.endel.nativewebsocket.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.Voice.Hub.Runtime">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.Voice.Hub.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.Voice.NLayer, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.Voice.NLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.Voice.Opus, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.Voice.Opus.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.VoiceSDK.Mic.Common, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.VoiceSDK.Mic.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.VoiceSDK.Mic.Other, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.VoiceSDK.Mic.Other.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.Wit.Composer">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.Wit.Composer.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.Wit.Dictation">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.Wit.Dictation.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.WitAi, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.WitAi.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.WitAi.Lib, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.WitAi.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.WitAi.TTS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.WitAi.TTS.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.XR.Audio">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.XR.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.XR.BuildingBlocks">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.XR.BuildingBlocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.XR.EnvironmentDepth">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.XR.EnvironmentDepth.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.XR.ImmersiveDebugger">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.XR.ImmersiveDebugger.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.XR.ImmersiveDebugger.Interface">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.XR.ImmersiveDebugger.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="meta.xr.mrutilitykit">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\meta.xr.mrutilitykit.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.XR.MultiplayerBlocks.Fusion">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.XR.MultiplayerBlocks.Fusion.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.XR.MultiplayerBlocks.Shared">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Meta.XR.MultiplayerBlocks.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Modio, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Modio.dll</HintPath>
+    </Reference>
+    <Reference Include="Modio.Unity, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Modio.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Modio.Unity.Examples">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Modio.Unity.Examples.dll</HintPath>
+    </Reference>
+    <Reference Include="Modio.Unity.UI">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Modio.Unity.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="NanoSockets, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\NanoSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\Photon3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="PhotonRealtime">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\PhotonRealtime.dll</HintPath>
+    </Reference>
+    <Reference Include="PhotonUnityNetworking">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\PhotonUnityNetworking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Gorilla Tag\Gorilla Tag_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="bayraklar\afghanistan.png">
+      <LogicalName>flags.countries.afghanistan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\albania.png">
+      <LogicalName>flags.countries.albania.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\angola.png">
+      <LogicalName>flags.countries.angola.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\antigua_barbuda.png">
+      <LogicalName>flags.countries.antigua_barbuda.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\bahamas.png">
+      <LogicalName>flags.countries.bahamas.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\bahrain.png">
+      <LogicalName>flags.countries.bahrain.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\bangladesh.png">
+      <LogicalName>flags.countries.bangladesh.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\barbados.png">
+      <LogicalName>flags.countries.barbados.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\belize.png">
+      <LogicalName>flags.countries.belize.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\benin.png">
+      <LogicalName>flags.countries.benin.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\bhutan.png">
+      <LogicalName>flags.countries.bhutan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\bolivia.png">
+      <LogicalName>flags.countries.bolivia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\botswana.png">
+      <LogicalName>flags.countries.botswana.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\brunei.png">
+      <LogicalName>flags.countries.brunei.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\burkina_faso.png">
+      <LogicalName>flags.countries.burkina_faso.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\burundi.png">
+      <LogicalName>flags.countries.burundi.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\cambodia.png">
+      <LogicalName>flags.countries.cambodia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\cameroon.png">
+      <LogicalName>flags.countries.cameroon.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\cape_verde.png">
+      <LogicalName>flags.countries.cape_verde.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\central_african_republic.png">
+      <LogicalName>flags.countries.central_african_republic.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\chad.png">
+      <LogicalName>flags.countries.chad.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\colombia.png">
+      <LogicalName>flags.countries.colombia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\comoros.png">
+      <LogicalName>flags.countries.comoros.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\congo.png">
+      <LogicalName>flags.countries.congo.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\costa_rica.png">
+      <LogicalName>flags.countries.costa_rica.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\cuba.png">
+      <LogicalName>flags.countries.cuba.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\cyprus.png">
+      <LogicalName>flags.countries.cyprus.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\djibouti.png">
+      <LogicalName>flags.countries.djibouti.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\dominica.png">
+      <LogicalName>flags.countries.dominica.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\dominican_republic.png">
+      <LogicalName>flags.countries.dominican_republic.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\dr_congo.png">
+      <LogicalName>flags.countries.dr_congo.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\east_timor.png">
+      <LogicalName>flags.countries.east_timor.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\ecuador.png">
+      <LogicalName>flags.countries.ecuador.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\el_salvador.png">
+      <LogicalName>flags.countries.el_salvador.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\equatorial_guinea.png">
+      <LogicalName>flags.countries.equatorial_guinea.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\eritrea.png">
+      <LogicalName>flags.countries.eritrea.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\eswatini.png">
+      <LogicalName>flags.countries.eswatini.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\ethiopia.png">
+      <LogicalName>flags.countries.ethiopia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\fiji.png">
+      <LogicalName>flags.countries.fiji.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\gabon.png">
+      <LogicalName>flags.countries.gabon.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\gambia.png">
+      <LogicalName>flags.countries.gambia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\ghana.png">
+      <LogicalName>flags.countries.ghana.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\grenada.png">
+      <LogicalName>flags.countries.grenada.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\guatemala.png">
+      <LogicalName>flags.countries.guatemala.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\guinea.png">
+      <LogicalName>flags.countries.guinea.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\guinea_bissau.png">
+      <LogicalName>flags.countries.guinea_bissau.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\guyana.png">
+      <LogicalName>flags.countries.guyana.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\haiti.png">
+      <LogicalName>flags.countries.haiti.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\honduras.png">
+      <LogicalName>flags.countries.honduras.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\iraq.png">
+      <LogicalName>flags.countries.iraq.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\ivory_coast.png">
+      <LogicalName>flags.countries.ivory_coast.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\jamaica.png">
+      <LogicalName>flags.countries.jamaica.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\jordan.png">
+      <LogicalName>flags.countries.jordan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\kazakhstan.png">
+      <LogicalName>flags.countries.kazakhstan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\kenya.png">
+      <LogicalName>flags.countries.kenya.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\kiribati.png">
+      <LogicalName>flags.countries.kiribati.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\kuwait.png">
+      <LogicalName>flags.countries.kuwait.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\kyrgyzstan.png">
+      <LogicalName>flags.countries.kyrgyzstan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\laos.png">
+      <LogicalName>flags.countries.laos.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\lebanon.png">
+      <LogicalName>flags.countries.lebanon.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\lesotho.png">
+      <LogicalName>flags.countries.lesotho.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\liberia.png">
+      <LogicalName>flags.countries.liberia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\madagascar.png">
+      <LogicalName>flags.countries.madagascar.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\malawi.png">
+      <LogicalName>flags.countries.malawi.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\maldives.png">
+      <LogicalName>flags.countries.maldives.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\mali.png">
+      <LogicalName>flags.countries.mali.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\marshall_islands.png">
+      <LogicalName>flags.countries.marshall_islands.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\mauritania.png">
+      <LogicalName>flags.countries.mauritania.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\mauritius.png">
+      <LogicalName>flags.countries.mauritius.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\micronesia.png">
+      <LogicalName>flags.countries.micronesia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\mongolia.png">
+      <LogicalName>flags.countries.mongolia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\mozambique.png">
+      <LogicalName>flags.countries.mozambique.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\myanmar.png">
+      <LogicalName>flags.countries.myanmar.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\namibia.png">
+      <LogicalName>flags.countries.namibia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\nauru.png">
+      <LogicalName>flags.countries.nauru.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\nepal.png">
+      <LogicalName>flags.countries.nepal.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\new_zealand.png">
+      <LogicalName>flags.countries.new_zealand.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\nicaragua.png">
+      <LogicalName>flags.countries.nicaragua.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\niger.png">
+      <LogicalName>flags.countries.niger.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\nigeria.png">
+      <LogicalName>flags.countries.nigeria.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\north_korea.png">
+      <LogicalName>flags.countries.north_korea.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\northern_ireland.png">
+      <LogicalName>flags.countries.northern_ireland.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\oman.png">
+      <LogicalName>flags.countries.oman.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pakistan.png">
+      <LogicalName>flags.countries.pakistan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\palau.png">
+      <LogicalName>flags.countries.palau.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\palestine.png">
+      <LogicalName>flags.countries.palestine.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\panama.png">
+      <LogicalName>flags.countries.panama.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\papua_new_guinea.png">
+      <LogicalName>flags.countries.papua_new_guinea.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\paraguay.png">
+      <LogicalName>flags.countries.paraguay.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\peru.png">
+      <LogicalName>flags.countries.peru.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\qatar.png">
+      <LogicalName>flags.countries.qatar.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\rwanda.png">
+      <LogicalName>flags.countries.rwanda.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\saint_kitts_nevis.png">
+      <LogicalName>flags.countries.saint_kitts_nevis.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\saint_lucia.png">
+      <LogicalName>flags.countries.saint_lucia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\saint_vincent.png">
+      <LogicalName>flags.countries.saint_vincent.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\samoa.png">
+      <LogicalName>flags.countries.samoa.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\sao_tome_principe.png">
+      <LogicalName>flags.countries.sao_tome_principe.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\scotland.png">
+      <LogicalName>flags.countries.scotland.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\senegal.png">
+      <LogicalName>flags.countries.senegal.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\seychelles.png">
+      <LogicalName>flags.countries.seychelles.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\sierra_leone.png">
+      <LogicalName>flags.countries.sierra_leone.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\singapore.png">
+      <LogicalName>flags.countries.singapore.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\solomon_islands.png">
+      <LogicalName>flags.countries.solomon_islands.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\somalia.png">
+      <LogicalName>flags.countries.somalia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\south_sudan.png">
+      <LogicalName>flags.countries.south_sudan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\sri_lanka.png">
+      <LogicalName>flags.countries.sri_lanka.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\sudan.png">
+      <LogicalName>flags.countries.sudan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\suriname.png">
+      <LogicalName>flags.countries.suriname.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\syria.png">
+      <LogicalName>flags.countries.syria.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\tajikistan.png">
+      <LogicalName>flags.countries.tajikistan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\tanzania.png">
+      <LogicalName>flags.countries.tanzania.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\togo.png">
+      <LogicalName>flags.countries.togo.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\tonga.png">
+      <LogicalName>flags.countries.tonga.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\trinidad_tobago.png">
+      <LogicalName>flags.countries.trinidad_tobago.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\tunisia.png">
+      <LogicalName>flags.countries.tunisia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\turkmenistan.png">
+      <LogicalName>flags.countries.turkmenistan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\tuvalu.png">
+      <LogicalName>flags.countries.tuvalu.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\uganda.png">
+      <LogicalName>flags.countries.uganda.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\uruguay.png">
+      <LogicalName>flags.countries.uruguay.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\uzbekistan.png">
+      <LogicalName>flags.countries.uzbekistan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\vanuatu.png">
+      <LogicalName>flags.countries.vanuatu.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\venezuela.png">
+      <LogicalName>flags.countries.venezuela.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\wales.png">
+      <LogicalName>flags.countries.wales.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\yemen.png">
+      <LogicalName>flags.countries.yemen.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\zambia.png">
+      <LogicalName>flags.countries.zambia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\zimbabwe.png">
+      <LogicalName>flags.countries.zimbabwe.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\east_turkestan.png">
+      <LogicalName>flags.regions.east_turkestan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\tibet.png">
+      <LogicalName>flags.regions.tibet.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\aceh.png">
+      <LogicalName>flags.regions.aceh.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\yogyakarta.png">
+      <LogicalName>flags.regions.yogyakarta.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\papua.png">
+      <LogicalName>flags.regions.papua.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\west_papua.png">
+      <LogicalName>flags.regions.west_papua.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\bangsamoro.png">
+      <LogicalName>flags.regions.bangsamoro.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\gorno_badakhshan.png">
+      <LogicalName>flags.regions.gorno_badakhshan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\karakalpakstan.png">
+      <LogicalName>flags.regions.karakalpakstan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\bashkortostan.png">
+      <LogicalName>flags.regions.bashkortostan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\chuvashia.png">
+      <LogicalName>flags.regions.chuvashia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\tuva.png">
+      <LogicalName>flags.regions.tuva.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\sakha.png">
+      <LogicalName>flags.regions.sakha.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\altai_republic.png">
+      <LogicalName>flags.regions.altai_republic.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\khakassia.png">
+      <LogicalName>flags.regions.khakassia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\chechnya.png">
+      <LogicalName>flags.regions.chechnya.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\dagestan.png">
+      <LogicalName>flags.regions.dagestan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\ingushetia.png">
+      <LogicalName>flags.regions.ingushetia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\komi.png">
+      <LogicalName>flags.regions.komi.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\karelia.png">
+      <LogicalName>flags.regions.karelia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\jewish_ao.png">
+      <LogicalName>flags.regions.jewish_ao.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\chukotka.png">
+      <LogicalName>flags.regions.chukotka.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\transnistria.png">
+      <LogicalName>flags.regions.transnistria.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\crimea.png">
+      <LogicalName>flags.regions.crimea.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\adjara.png">
+      <LogicalName>flags.regions.adjara.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\abkhazia.png">
+      <LogicalName>flags.regions.abkhazia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\south_ossetia.png">
+      <LogicalName>flags.regions.south_ossetia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\mount_athos.png">
+      <LogicalName>flags.regions.mount_athos.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\vojvodina.png">
+      <LogicalName>flags.regions.vojvodina.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\sicily.png">
+      <LogicalName>flags.regions.sicily.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\sardinia.png">
+      <LogicalName>flags.regions.sardinia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\aosta_valley.png">
+      <LogicalName>flags.regions.aosta_valley.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\friuli.png">
+      <LogicalName>flags.regions.friuli.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\trentino.png">
+      <LogicalName>flags.regions.trentino.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\andalusia.png">
+      <LogicalName>flags.regions.andalusia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\azores.png">
+      <LogicalName>flags.regions.azores.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\madeira.png">
+      <LogicalName>flags.regions.madeira.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\northern_mariana.png">
+      <LogicalName>flags.regions.northern_mariana.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\guam.png">
+      <LogicalName>flags.regions.guam.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\american_samoa.png">
+      <LogicalName>flags.regions.american_samoa.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\us_virgin_islands.png">
+      <LogicalName>flags.regions.us_virgin_islands.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\barbuda.png">
+      <LogicalName>flags.regions.barbuda.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\nevis.png">
+      <LogicalName>flags.regions.nevis.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\zanzibar.png">
+      <LogicalName>flags.regions.zanzibar.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\bougainville.png">
+      <LogicalName>flags.regions.bougainville.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\niue.png">
+      <LogicalName>flags.regions.niue.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\rodrigues.png">
+      <LogicalName>flags.regions.rodrigues.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\principe.png">
+      <LogicalName>flags.regions.principe.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\north_caribbean_coast.png">
+      <LogicalName>flags.regions.north_caribbean_coast.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\south_caribbean_coast.png">
+      <LogicalName>flags.regions.south_caribbean_coast.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\northern_cyprus.png">
+      <LogicalName>flags.regions.northern_cyprus.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\aland.png">
+      <LogicalName>flags.regions.aland.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\aruba.png">
+      <LogicalName>flags.regions.aruba.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\basque_country.png">
+      <LogicalName>flags.regions.basque_country.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\bermuda.png">
+      <LogicalName>flags.regions.bermuda.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\catalonia.png">
+      <LogicalName>flags.regions.catalonia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\cayman_islands.png">
+      <LogicalName>flags.regions.cayman_islands.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\cook_islands.png">
+      <LogicalName>flags.regions.cook_islands.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\curacao.png">
+      <LogicalName>flags.regions.curacao.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\faroe_islands.png">
+      <LogicalName>flags.regions.faroe_islands.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\french_polynesia.png">
+      <LogicalName>flags.regions.french_polynesia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\gagauzia.png">
+      <LogicalName>flags.regions.gagauzia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\galicia.png">
+      <LogicalName>flags.regions.galicia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\gibraltar.png">
+      <LogicalName>flags.regions.gibraltar.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\greenland.png">
+      <LogicalName>flags.regions.greenland.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\guernsey.png">
+      <LogicalName>flags.regions.guernsey.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\hong_kong.png">
+      <LogicalName>flags.regions.hong_kong.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\isle_of_man.png">
+      <LogicalName>flags.regions.isle_of_man.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\jersey.png">
+      <LogicalName>flags.regions.jersey.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\kurdistan_region.png">
+      <LogicalName>flags.regions.kurdistan_region.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\macau.png">
+      <LogicalName>flags.regions.macau.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\new_caledonia.png">
+      <LogicalName>flags.regions.new_caledonia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\puerto_rico.png">
+      <LogicalName>flags.regions.puerto_rico.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\sint_maarten.png">
+      <LogicalName>flags.regions.sint_maarten.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\regions\tatarstan.png">
+      <LogicalName>flags.regions.tatarstan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\algeria.png">
+      <LogicalName>flags.countries.algeria.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\andorra.png">
+      <LogicalName>flags.countries.andorra.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\argentina.png">
+      <LogicalName>flags.countries.argentina.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\armenia.png">
+      <LogicalName>flags.countries.armenia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\australia.png">
+      <LogicalName>flags.countries.australia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\austria.png">
+      <LogicalName>flags.countries.austria.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\azerbaijan.png">
+      <LogicalName>flags.countries.azerbaijan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\belarus.png">
+      <LogicalName>flags.countries.belarus.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\belgium.png">
+      <LogicalName>flags.countries.belgium.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\bosnia_herzegovina.png">
+      <LogicalName>flags.countries.bosnia_herzegovina.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\brazil.png">
+      <LogicalName>flags.countries.brazil.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\bulgaria.png">
+      <LogicalName>flags.countries.bulgaria.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\canada.png">
+      <LogicalName>flags.countries.canada.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\chile.png">
+      <LogicalName>flags.countries.chile.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\china.png">
+      <LogicalName>flags.countries.china.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\croatia.png">
+      <LogicalName>flags.countries.croatia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\czechia.png">
+      <LogicalName>flags.countries.czechia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\denmark.png">
+      <LogicalName>flags.countries.denmark.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\egypt.png">
+      <LogicalName>flags.countries.egypt.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\estonia.png">
+      <LogicalName>flags.countries.estonia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\finland.png">
+      <LogicalName>flags.countries.finland.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\france.png">
+      <LogicalName>flags.countries.france.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\georgia.png">
+      <LogicalName>flags.countries.georgia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\germany.png">
+      <LogicalName>flags.countries.germany.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\greece.png">
+      <LogicalName>flags.countries.greece.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\hungary.png">
+      <LogicalName>flags.countries.hungary.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\iceland.png">
+      <LogicalName>flags.countries.iceland.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\india.png">
+      <LogicalName>flags.countries.india.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\indonesia.png">
+      <LogicalName>flags.countries.indonesia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\iran.png">
+      <LogicalName>flags.countries.iran.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\ireland.png">
+      <LogicalName>flags.countries.ireland.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\israel.png">
+      <LogicalName>flags.countries.israel.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\italy.png">
+      <LogicalName>flags.countries.italy.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\japan.png">
+      <LogicalName>flags.countries.japan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\kosovo.png">
+      <LogicalName>flags.countries.kosovo.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\latvia.png">
+      <LogicalName>flags.countries.latvia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\libya.png">
+      <LogicalName>flags.countries.libya.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\liechtenstein.png">
+      <LogicalName>flags.countries.liechtenstein.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\lithuania.png">
+      <LogicalName>flags.countries.lithuania.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\luxembourg.png">
+      <LogicalName>flags.countries.luxembourg.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\malaysia.png">
+      <LogicalName>flags.countries.malaysia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\malta.png">
+      <LogicalName>flags.countries.malta.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\mexico.png">
+      <LogicalName>flags.countries.mexico.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\moldova.png">
+      <LogicalName>flags.countries.moldova.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\monaco.png">
+      <LogicalName>flags.countries.monaco.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\montenegro.png">
+      <LogicalName>flags.countries.montenegro.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\morocco.png">
+      <LogicalName>flags.countries.morocco.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\netherlands.png">
+      <LogicalName>flags.countries.netherlands.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\north_macedonia.png">
+      <LogicalName>flags.countries.north_macedonia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\norway.png">
+      <LogicalName>flags.countries.norway.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\philippines.png">
+      <LogicalName>flags.countries.philippines.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\poland.png">
+      <LogicalName>flags.countries.poland.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\portugal.png">
+      <LogicalName>flags.countries.portugal.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\romania.png">
+      <LogicalName>flags.countries.romania.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\russia.png">
+      <LogicalName>flags.countries.russia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\san_marino.png">
+      <LogicalName>flags.countries.san_marino.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\saudi_arabia.png">
+      <LogicalName>flags.countries.saudi_arabia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\serbia.png">
+      <LogicalName>flags.countries.serbia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\slovakia.png">
+      <LogicalName>flags.countries.slovakia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\slovenia.png">
+      <LogicalName>flags.countries.slovenia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\south_africa.png">
+      <LogicalName>flags.countries.south_africa.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\south_korea.png">
+      <LogicalName>flags.countries.south_korea.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\spain.png">
+      <LogicalName>flags.countries.spain.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\sweden.png">
+      <LogicalName>flags.countries.sweden.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\switzerland.png">
+      <LogicalName>flags.countries.switzerland.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\taiwan.png">
+      <LogicalName>flags.countries.taiwan.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\thailand.png">
+      <LogicalName>flags.countries.thailand.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\turkey.png">
+      <LogicalName>flags.countries.turkey.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\uae.png">
+      <LogicalName>flags.countries.uae.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\ukraine.png">
+      <LogicalName>flags.countries.ukraine.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\united_kingdom.png">
+      <LogicalName>flags.countries.united_kingdom.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\usa.png">
+      <LogicalName>flags.countries.usa.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\vatican.png">
+      <LogicalName>flags.countries.vatican.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\vietnam.png">
+      <LogicalName>flags.countries.vietnam.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\agender.png">
+      <LogicalName>flags.pride.agender.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\aromantic.png">
+      <LogicalName>flags.pride.aromantic.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\asexual.png">
+      <LogicalName>flags.pride.asexual.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\bigender.png">
+      <LogicalName>flags.pride.bigender.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\bisexual.png">
+      <LogicalName>flags.pride.bisexual.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\demisexual.png">
+      <LogicalName>flags.pride.demisexual.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\gay_men.png">
+      <LogicalName>flags.pride.gay_men.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\genderfluid.png">
+      <LogicalName>flags.pride.genderfluid.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\genderqueer.png">
+      <LogicalName>flags.pride.genderqueer.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\intersex.png">
+      <LogicalName>flags.pride.intersex.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\lesbian.png">
+      <LogicalName>flags.pride.lesbian.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\nonbinary.png">
+      <LogicalName>flags.pride.nonbinary.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\omnisexual.png">
+      <LogicalName>flags.pride.omnisexual.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\original_8.png">
+      <LogicalName>flags.pride.original_8.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\pansexual.png">
+      <LogicalName>flags.pride.pansexual.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\philadelphia.png">
+      <LogicalName>flags.pride.philadelphia.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\polysexual.png">
+      <LogicalName>flags.pride.polysexual.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\progress.png">
+      <LogicalName>flags.pride.progress.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\progress_intersex.png">
+      <LogicalName>flags.pride.progress_intersex.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\rainbow.png">
+      <LogicalName>flags.pride.rainbow.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\straight_ally.png">
+      <LogicalName>flags.pride.straight_ally.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\trans.png">
+      <LogicalName>flags.pride.trans.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\pride\two_spirit.png">
+      <LogicalName>flags.pride.two_spirit.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\african_union.png">
+      <LogicalName>flags.organizations.african_union.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\arab_league.png">
+      <LogicalName>flags.organizations.arab_league.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\asean.png">
+      <LogicalName>flags.organizations.asean.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\cis.png">
+      <LogicalName>flags.organizations.cis.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\council_of_europe.png">
+      <LogicalName>flags.organizations.council_of_europe.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\csto.png">
+      <LogicalName>flags.organizations.csto.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\eu.png">
+      <LogicalName>flags.organizations.eu.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\nato.png">
+      <LogicalName>flags.organizations.nato.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\oic.png">
+      <LogicalName>flags.organizations.oic.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\sco.png">
+      <LogicalName>flags.organizations.sco.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\turkic_states.png">
+      <LogicalName>flags.organizations.turkic_states.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bayraklar\organizations\un.png">
+      <LogicalName>flags.organizations.un.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sablon\atlas276.png">
+      <LogicalName>gorillaflag.atlas276.dat</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
